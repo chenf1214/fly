@@ -1,4 +1,4 @@
-# Table + Pagitation （表格+分页）高阶组件
+# Table + Pagitation （表格+分页）高阶组件  -- by chenf
 ## 功能说明
 * 支持动态表头
 * 支持动态双层以及无限层表头
