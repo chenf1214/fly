@@ -1,5 +1,11 @@
-# fly
-Table Attributes
+# Table + Pagitation （表格+分页）高阶组件
+## 功能说明
+* 支持动态表头
+* 支持动态双层以及无限层表头
+* 支持分页且不需要代码
+* 支持mixins 强烈推荐使用mixins
+
+## Table Attributes
 
 | 属性 | 说明 | 类型 | 默认值 |
 | :-----| ----: | :----: | :----: |
@@ -14,7 +20,7 @@ Table Attributes
 | stripe | 是否为斑马纹 table | Boolean | true | 
 
 
-Table Events
+## Table Events
 
 | 事件名 | 说明 | 返回值 | 默认值 |
 | :-----| ----: | :----: | :----: |
@@ -22,7 +28,7 @@ Table Events
 | handleAction | 操作列按钮点击事件，注意：事件名随mixins里cfbtns的function配置动态变换 | 当前行数据 | - |
 
 
-Pagination Attributes
+## Pagination Attributes
 
 | 属性 | 说明 | 类型 | 默认值 |
 | :-----| ----: | :----: | :----: |
@@ -30,3 +36,30 @@ Pagination Attributes
 | total | 总条目数 | Number | 0 |
 | curPageSize | 当前每页显示数 | Number | 10 |
 | currentPage | 当前第几页 | Number | 1 |
+
+## Pagination Events
+
+| 事件名 | 说明 | 返回值 | 默认值 |
+| :-----| ----: | :----: | :----: |
+| fetchData | 分页动态获取表格数据，详细用法见例子 | - | - |
+
+### Columns Attributes
+
+| 参数 | 说明 | 可选值 | 是否必填 |
+| :-----| ----: | :----: | :----: |
+| align | 对齐方式 | left/center/right | 是 |
+| label | 显示的标题 | - | 是 |
+| width | 对应列的宽度 | - | 否 |
+| type | 对应列的类型。如果设置了 selection 则显示多选框；如果设置了 index 则显示该行的索引（从 1 开始计算）；如果设置了 expand 则显示为一个可展开的按钮 | selection/index/expand | 否 |
+
+### btns Attributes
+
+| 参数 | 说明 | 是否必填 | 
+| :-----| ----: | :----: | 
+| type | 按钮显示样式 | 是 | 
+| label | 按钮名称 | 是 | 
+| action | 动态事件名称 | 是 | 
+
+
+
+
